@@ -30,4 +30,8 @@ proguard/
 .navigation/
 
 # Android Studio captures folder
+<<<<<<< HEAD
 captures/
+=======
+captures/
+>>>>>>> a7eb494ba6dad8d112250a91a086bc1adc988894
