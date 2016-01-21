@@ -20,6 +20,7 @@
         android:layout_marginTop="10dp"
         android:text="@string/btn_txt"
         android:padding="15dp"
+        android:id="@+id/boom_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
 
@@ -28,8 +29,6 @@
         android:layout_marginTop="10dp"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-    </LinearLayout>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>
