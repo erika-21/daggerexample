@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">daggerexample</string>
+    <string name="btn_txt">Click Here</string>
 </resources>
