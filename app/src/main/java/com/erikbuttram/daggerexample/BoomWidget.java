@@ -7,6 +7,7 @@ import android.util.AttributeSet;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.Random;
 
 import javax.inject.Inject;
 
@@ -31,6 +32,10 @@ public class BoomWidget {
         mBooms.add("High Fives!");
     }
 
-
+    public String provideText() {
+        Random random = new Random();
+        int rand = random.nextInt(mBooms.size());
+        return mBooms.get(rand);
+    }
 
 }
