@@ -18,8 +18,13 @@ public class TrivialModule {
     }
 
     @Provides
+    DataPresenter providePresenter(DataSource dataSource) {
+        return new DataPresenter(dataSource);
+    }
+
+    @Provides
     BoomWidget provideWidget() {
-        return new BoomWidget(mContext);
+        return new BoomWidget();
     }
 
 }

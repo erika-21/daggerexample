@@ -6,36 +6,31 @@ import android.os.Build;
 import android.util.AttributeSet;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 import javax.inject.Inject;
 
 /**
  * Created by erikb on 1/20/16.
  *
  * Dumbest Widget on the planet, it literally provides
- * a textview with the word "pow" set as the initial text
+ * a random string.  Granted this isn't the most
+ * production worthy example, but it should demonstrate
+ * that Components can be instantiated by request via the
+ * Provider<T> Object
  */
-public class BoomWidget extends TextView {
+public class BoomWidget {
 
-    private Context mContext;
+    private ArrayList<String> mBooms;
 
-    private void init() {
-        setText("POW!");
+    public BoomWidget() {
+        mBooms = new ArrayList<>();
+        mBooms.add("Boom!");
+        mBooms.add("POW!");
+        mBooms.add("Wham!");
+        mBooms.add("High Fives!");
     }
 
-    public BoomWidget(Context context) {
-        super(context);
-    }
 
-    public BoomWidget(Context context, AttributeSet attrs) {
-        super(context, attrs);
-    }
 
-    public BoomWidget(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-    }
-
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public BoomWidget(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-        super(context, attrs, defStyleAttr, defStyleRes);
-    }
 }

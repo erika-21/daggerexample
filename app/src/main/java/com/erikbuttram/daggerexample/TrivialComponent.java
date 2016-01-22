@@ -1,5 +1,7 @@
 package com.erikbuttram.daggerexample;
 
+import javax.inject.Singleton;
+
 import dagger.Component;
 
 /**
@@ -10,6 +12,7 @@ import dagger.Component;
  * the implementing interface is determined at runtime, however, catching any
  * errors/stupidity you may throw at it.
  */
+@Singleton
 @Component(modules=TrivialModule.class)
 public interface TrivialComponent {
     void inject(MainActivity activity);

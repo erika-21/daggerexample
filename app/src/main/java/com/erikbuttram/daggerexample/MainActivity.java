@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     @Inject
     Provider<BoomWidget> mBoomProvider;
 
-    @Inject DataSource mDataSource;
+    @Inject DataPresenter mPresenter;
 
     private ViewGroup mBoomGroup;
 
@@ -33,11 +33,7 @@ public class MainActivity extends AppCompatActivity {
         ViewGroup dataContainer = (ViewGroup)findViewById(R.id.data_container);
         View button = findViewById(R.id.boom_btn);
         button.setOnClickListener(mOnClick);
-        for (SomeData sd : mDataSource.getData()) {
-            TextView tv = new TextView(this);
-            tv.setText(String.format("%s %s", sd.mDataName, sd.mDataValue));
-            dataContainer.addView(tv);
-        }
+        dataContainer.addView(mPresenter.present(this));
     }
 
     private View.OnClickListener mOnClick = new View.OnClickListener() {

@@ -9,6 +9,11 @@ import javax.inject.Singleton;
 
 /**
  * Created by erikb on 1/20/16.
+ *
+ * A trivial data source class that does very little, Not very useful,
+ * but shows how a component that can be instantiated implicitly with no effort
+ * from the developer
+ *
  */
 @Singleton
 public class DataSource {
